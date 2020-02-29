@@ -1,0 +1,11 @@
+version: "2"
+services: 
+    burrow:
+        image: "burrow_burrow"
+        ports:
+          - 8000:8000
+        volumes:
+          - "${PWD}/burrow-config:/etc/burrow/"
+          - "${PWD}/tmp:/var/tmp/burrow"
+          - "${PWD}/logs:/app/logs"
+        # restart: always
